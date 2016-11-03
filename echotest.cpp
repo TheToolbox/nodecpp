@@ -88,9 +88,7 @@ static void after_read(uv_stream_t* handle,
 }
 
 
-static void alloc_cb(uv_handle_t* handle,
-                    size_t suggested_size,
-                    uv_buf_t* buf) {
+static void alloc_cb(uv_handle_t* handle, size_t suggested_size, uv_buf_t* buf) {
   buf->base = (char *)malloc(suggested_size);
   assert(buf->base != NULL);
   buf->len = suggested_size;
