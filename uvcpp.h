@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <iostream>
 #include <functional>
-#include <uv.h>
 
 namespace uv {
+    #include <uv.h>
+
     typedef struct {
         uv_write_t req;
         uv_buf_t buf;
